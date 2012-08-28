@@ -15,8 +15,8 @@ security:
                 target: /
     access_control:
         - { path: ^/register, roles: ROLE_SUPER_ADMIN }
-        - { path: ^/category2$, roles: [ROLE_ADMIN] }
-        - { path: ^/category(3|4), roles: [ROLE_USER,ROLE_ADMIN] }
+        - { path: ^/admin, roles: [ROLE_SUPER_ADMIN,ROLE_ADMIN] }
+        - { path: ^/category(3|4)$, roles: [ROLE_USER,ROLE_ADMIN] }
 
     providers:
         fos_userbundle:

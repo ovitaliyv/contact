@@ -1,9 +1,7 @@
-{% extends '::base.html.twig' %}
-
-{% block title %} Ошибка {{ status_text }} {% endblock %}
+{% extends 'TwigBundle:Exception:error.html.twig' %}
 
 {% block main %} 
-<div class="hero-unit">
+<div class="well">
     <h2>Доступ запрещен!</h2>
 </div>
 {% endblock %}

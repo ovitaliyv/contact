@@ -1,9 +1,10 @@
-{% extends '::base.html.twig' %}
+{% extends 'TwigBundle:Exception:error.html.twig' %}
+
 
 {% block title %} Ошибка {{ status_text }} {% endblock %}
 
 {% block main %} 
-<div class="hero-unit">
+<div class="well">
     <h2>Страница не найдена. Неверный адрес.</h2>
 </div>
 {% endblock %}
