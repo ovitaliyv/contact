@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Ошибка {{ status_text }} {% endblock %}
+
+{% block main %} 
+<div class="hero-unit">
+    <h2>{{ status_code }} ( {{ status_text }} )</h2>
+</div>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends '::base.html.twig' %}
+
+{% block main %}  
+
+<table class="table table-bordered table-condensed table-striped " >
+    {% if client %}
+    <tr>
+      <th class=""> Имя:</th><td class=""> {{ client.firstname }} </td>
+    </tr>
+    <tr>
+      <th class=""> Фамлия:</th><td class=""> {{ client.lastname }} </td>
+    </tr>
+    <tr>
+      <th class=""> ID:</th><td class=""> {{ client.id }} </td>
+    </tr>
+    <tr>
+      <th class=""> Отчество:</th><td class=""> {{ client.patronymic }} </td>
+    </tr>
+    <tr>
+      <th class=""> Фото:</th><td class=""> {{ client.photo }} </td>
+    </tr>
+    <tr>
+      <th class=""> Пол:</th><td class=""> {{ client.gender }} </td>
+    </tr>
+    <tr>
+      <th class=""> Дата рождения:</th><td class=""> {{ client.birthday }} </td>
+    </tr>
+    <tr>
+      <th class=""> Место рождения:</th><td class=""> {{ client.birthplace }} </td>
+    </tr>
+    <tr>
+      <th class=""> Рост:</th><td class=""> {{ client.height }} </td>
+    </tr>
+    <tr>
+      <th class=""> Вес:</th><td class=""> {{ client.weight }} </td>
+    </tr>
+    <tr>
+      <th class=""> Цвет волос:</th><td class=""> {{ client.hairColor }} </td>
+    </tr>
+    <tr>
+      <th class=""> Цвет глаз:</th><td class=""> {{ client.eyeColor }} </td>
+    </tr>
+    <tr>
+      <th class=""> Семейное положение:</th><td class=""> {{ client.maritalStatus }} </td>
+    </tr>
+    <tr>
+      <th class=""> Количество детей:</th><td class=""> {{ client.children }} </td>
+    </tr>
+    <tr>
+      <th class=""> Образование:</th><td class=""> {{ client.education }} </td>
+    </tr>
+    <tr>
+      <th class=""> Профессия:</th><td class=""> {{ client.specialty }} </td>
+    </tr>
+    <tr>
+      <th class=""> Паспортные данные:</th><td class=""> {{ client.passport }} </td>
+    </tr>
+    <tr>
+      <th class=""> Адрес проживания:</th><td class=""> {{ client.adress }} </td>
+    </tr>
+    <tr>
+      <th class=""> Контактный телефон:</th><td class=""> {{ client.phoneNumber }} </td>
+    </tr>
+    <tr>
+      <th class=""> E-mail:</th><td class=""> {{ client.email }} </td>
+    </tr>
+    <tr>
+      <th class=""> ICQ:</th><td class=""> {{ client.icq }} </td>
+    </tr>
+    <tr>
+      <th class=""> Skype:</th><td class=""> {{ client.skype }} </td>
+    </tr>
+    <tr>
+      <th class=""> Описание:</th><td class=""> {{ client.description }} </td>
+    </tr>
+    <tr>
+      <th class=""> Хобби:</th><td class=""> {{ client.hobbies }} </td>
+    </tr>
+    <tr>
+      <th class=""> Жизненные приоритеты:</th><td class=""> {{ client.lifePriorities }} </td>
+    </tr>
+    <tr>
+      <th class=""> Мужчина/женщина моей мечты:</th><td class=""> {{ client.manOfMyDreams }} </td>
+    </tr>
+    <tr>
+      <th class=""> Дополнительная информация:</th><td class=""> {{ client.more }} </td>
+    </tr>
+    {% else %}
+    <h2>Такой профиль клиента отсутствует!</h2>
+    {% endif %}
+  </table>
+{% endblock %}
+
+

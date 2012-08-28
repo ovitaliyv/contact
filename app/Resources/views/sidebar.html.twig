@@ -1,0 +1,14 @@
+  <div class="span3">
+    {% block side_nav %} 
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active dropdown">
+        <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#" >Категории</a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          {% for item in categories %}
+            <li><a href="{{ path('VetalSiteBundle_category', {category_id: item.id}) }} ">{{ item.name }} </a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+    {% endblock %}
+  </div>

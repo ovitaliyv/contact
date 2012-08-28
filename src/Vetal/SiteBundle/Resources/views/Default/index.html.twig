@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} Заголовок страницы {% endblock %}
+
+{% block header %} Название страницы {% endblock %}
+
+
+{% block slider %}
+  {% include('::flex-slider.html.twig') %}
+{% endblock %}
+
+{% block javascripts %}
+<script type='text/javascript' src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
+<script>
+  var $ = jQuery.noConflict();
+  $(window).load(function() {
+
+    $('.flexslider').flexslider({
+      animation: "fade"
+    });
+
+  });
+</script>
+{% endblock %}

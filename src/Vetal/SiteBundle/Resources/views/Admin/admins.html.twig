@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block main %}  
+<div class="well">
+  <h2>Свахи:</h2>
+  <ul>
+  {% for admin in admins %}
+    <li><a href="{{ path('client', { profile_id : admin.id } ) }}">{{ admin.username }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+
+

@@ -1,13 +1,53 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Google web font -->
+    <link href="{{ asset('css/css-family=Ovo.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('css/css-family=Great+Vibes.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('css/css-family=Azbuka03_D.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('css/font-MarckScript.css') }}" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" >
+    <link rel="stylesheet" href="{{ asset('css/yellow.css') }}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ asset('twitter-bootstrap/less/bootstrap.css') }}" />
+    <!--link rel="stylesheet/less" href="/twitter-bootstrap/less/bootstrap.less"-->
+    <!--script src="/twitter-bootstrap/js/less-1.3.0.min.js"></script-->
+    {% block stylesheets %}{% endblock %}
+    
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+    <script src="/js/libs/modernizr-2.5.3.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <div id="main_contaner" class="container-fluid">
+      {% include('::header.html.twig') %}
+        <div role="main" class="container">
+          <div class="row" id="main_content">
+            <div id="bottom_content">
+              <h1 class="title"><sub>e</sub>Contact</h1>
+              {% block slider %}{% endblock %}
+              {% include('::sidebar.html.twig') %}
+              <div class="span9">
+              {% block main %}{% endblock %}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    {% include('::footer.html.twig') %}
+
+    {% include('::common_scripts.html.twig') %}
+    {% block javascripts %}{% endblock %}
+    {#% include('::ga_script.html.twig') %#}
+      </body>
+    </html>

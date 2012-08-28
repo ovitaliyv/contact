@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'MarckScript';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/MarckScript/MarckScript.ttf");
+  src: local('MarckScript'), url("/fonts/MarckScript/MarckScript.ttf") format("truetype");
+}

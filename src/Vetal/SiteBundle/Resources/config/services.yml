@@ -1,0 +1,10 @@
+parameters:
+  vetal_site.categories.class: Vetal\SiteBundle\Twig\VetalExtension
+
+services:
+  twig.extension.vetal_extension:
+    class: %vetal_site.categories.class%
+    arguments: [ @doctrine.orm.entity_manager ]
+    tags:
+      - { name: twig.extension }
+  

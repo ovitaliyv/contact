@@ -1,0 +1,34 @@
+VetalSiteBundle_homepage:
+    pattern:  /
+    defaults: { _controller: VetalSiteBundle:Default:index }
+
+VetalSiteBundle_category:
+    pattern:  /category{category_id}
+    defaults: { _controller: VetalSiteBundle:Default:show }
+
+currUser:
+    pattern:  /curr_user
+    defaults: { _controller: VetalSiteBundle:Default:showUserProfile }
+
+currentUser:
+  pattern: /curr_user
+  defaults: {_controller: VetalUserBundle:Default:show }
+
+login:
+    pattern:   /login
+    defaults:  { _controller: VetalSiteBundle:Default:login }
+login_check:
+    pattern:   /login_check
+
+logout:
+  pattern: /logout
+
+client:
+  pattern: /client{profile_id}
+  defaults:  { _controller: VetalSiteBundle:Default:client }
+
+admins:
+  pattern: /admins
+  defaults:  { _controller: VetalSiteBundle:Admin:admins }
+
+  

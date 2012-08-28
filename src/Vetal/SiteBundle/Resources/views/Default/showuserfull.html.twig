@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block main %}  
+<div class="well">
+  <h2>
+    {% if userprofile %}
+      {{ userprofile.firstname }}
+    {% else %}
+      Профиль отсутствует!
+    {% endif %}
+  </h2>
+  <ul>
+  {% for client in clients %}
+    <li><a href="{{ path('client', { profile_id : client.id } ) }}">{{ client.firstname }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+
+
