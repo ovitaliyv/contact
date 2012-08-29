@@ -72,6 +72,8 @@ html,body{
 }
 header>[class*="span"]{
   padding: 5px 20px 0;
+  background: transparent url("/img/transp_bg1.png") top center no-repeat;
+  background-position-y: -45px;
 }
 footer{
   background: #075B8E url('/img/squares.png');
@@ -105,7 +107,7 @@ div[role='main']{
   margin: 0 auto;
 }
 #main_content{
-  background: transparent url("/img/shadow_bg.png") top left no-repeat;
+  background: transparent url("/img/shadow_bg.png") top center no-repeat;
   padding: 0 16px 240px;
 }
 #bottom_content{
@@ -115,9 +117,9 @@ div[role='main']{
   position: relative;
   z-index: 11;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 2px 3px #B4B4B4;
-  -moz-box-shadow: 0px 2px 3px #B4B4B4;
-  box-shadow: 0px 2px 3px #B4B4B4;
+  -webkit-box-shadow: 0px 1px 10px #B4B4B4;
+  -moz-box-shadow: 0px 1px 10px #B4B4B4;
+  box-shadow: 0px 1px 10px #B4B4B4;
 }
 #bottom_content:after{
   content: " ";
@@ -183,7 +185,7 @@ a.more_about, a.button { background:url("/img/yellow/more_about_bg.png") no-repe
 /*-----------------------------------------------------------------------------------*/
 .show_menu{ display:none;}
 .hide_menu{ display:none;}
-.menu{padding:0; text-align:center; width:100%; background:url("/img/menu_bg.jpg") no-repeat center bottom; height:70px;}
+.menu{padding:0; text-align:center; width:100%; height:70px;}
 ul#main_menu {list-style:none; margin:0; padding:0px;}
 ul#main_menu * {margin:0; padding:0;}
 ul#main_menu li {position:relative; padding:0 22px 0 22px; display:inline-block;}

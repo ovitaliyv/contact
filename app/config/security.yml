@@ -14,7 +14,7 @@ security:
                   csrf_provider: form.csrf_provider
             logout:
                   path:   fos_user_security_logout
-                  target: /
+                  target: VetalSiteBundle_homepage
     access_control:
         - { path: ^/register, roles: ROLE_SUPER_ADMIN }
         - { path: admin, roles: [ROLE_SUPER_ADMIN,ROLE_ADMIN] }

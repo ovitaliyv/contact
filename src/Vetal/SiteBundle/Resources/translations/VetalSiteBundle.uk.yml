@@ -1,0 +1,18 @@
+# menus
+menu:
+    main:
+        home: Головна
+        services: Послуги
+        gallery: Галерея Зірок
+        gallery_i:
+          ua: Україна
+          ru: Росія
+          world: Закордоном
+        about_us: Про нас
+        contacts: Контакти
+        news: Новини
+        search: Пошук
+    side:
+        name: Group name
+        name: Group name
+        name: Group name

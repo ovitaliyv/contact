@@ -1,0 +1,18 @@
+# menus
+menu:
+    main:
+        home: Homepage
+        services: Services
+        gallery: Gallery
+        gallery_i:
+          ua: Ukraine
+          ru: Russia
+          world: Foreign
+        about_us: About Us
+        contacts: Contacts
+        news: News
+        search: Search
+    side:
+        name: Group name
+        name: Group name
+        name: Group name

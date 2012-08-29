@@ -1,0 +1,18 @@
+# menus
+menu:
+    main:
+        home: Главная
+        services: Услуги
+        gallery: Галерея Звезд
+        gallery_i:
+          ua: Украина
+          ru: Россия
+          world: Зарубежье
+        about_us: О нас
+        contacts: Контакты
+        news: Новости
+        search: Поиск
+    side:
+        name: Group name
+        name: Group name
+        name: Group name
