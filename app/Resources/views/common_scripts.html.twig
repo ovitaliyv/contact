@@ -1,7 +1,13 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
-<script src="/js/plugins.js"></script>
-<script src="/js/script.js"></script>
-<script src="/twitter-bootstrap/js/bootstrap-dropdown.js"></script>
-<script>$('.dropdown-toggle').dropdown();</script>
+<script src="{{ asset('js/plugins.js') }}"></script>
+<script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/menu.js') }}"></script>
+<script src="{{ asset('twitter-bootstrap/js/bootstrap-dropdown.js') }}"></script>
+<script>
+  $('.dropdown-toggle').dropdown();
+  var main_menu=new main_menu.dd("main_menu");    
+  main_menu.init("main_menu","menuhover");  
+</script>
+
