@@ -1,34 +1,47 @@
 VetalSiteBundle_homepage:
-    pattern:  /
-    defaults: { _controller: VetalSiteBundle:Default:index }
+    pattern:  /{_locale}
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+
+VetalSiteBundle_homepageSlash:
+    pattern:  /{_locale}/
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
 
 VetalSiteBundle_category:
-    pattern:  /category{category_id}
-    defaults: { _controller: VetalSiteBundle:Default:show }
+    pattern:  /{_locale}/category{category_id}
+    defaults: { _controller: VetalSiteBundle:Default:show, _locale: %locale% }
+    requirements:
+      _locale: %locales%
 
 currUser:
-    pattern:  /curr_user
-    defaults: { _controller: VetalSiteBundle:Default:showUserProfile }
-
-currentUser:
-  pattern: /curr_user
-  defaults: {_controller: VetalUserBundle:Default:show }
+    pattern:  /{_locale}/curr_user
+    defaults: { _controller: VetalSiteBundle:Default:showUserProfile, _locale: %locale% }
+    requirements:
+      _locale: %locales%
 
 login:
-    pattern:   /login
-    defaults:  { _controller: VetalSiteBundle:Default:login }
+    pattern:   /{_locale}/login
+    defaults:  { _controller: VetalSiteBundle:Default:login, _locale: %locale% }
 login_check:
-    pattern:   /login_check
+    pattern:   /{_locale}/login_check
 
 logout:
-  pattern: /logout
+    pattern: /{_locale}/logout
+    defaults:  {_locale: %locale% }
 
 client:
-  pattern: /client{profile_id}
-  defaults:  { _controller: VetalSiteBundle:Default:client }
+    pattern: /{_locale}/client{profile_id}
+    defaults:  { _controller: VetalSiteBundle:Default:client, _locale: %locale% }
+    requirements:
+      _locale: %locales%
 
 admins:
-  pattern: /admins
-  defaults:  { _controller: VetalSiteBundle:Admin:admins }
+    pattern: /{_locale}/admins
+    defaults:  { _controller: VetalSiteBundle:Admin:admins, _locale: %locale% }
+    requirements:
+      _locale: %locales%
 
   

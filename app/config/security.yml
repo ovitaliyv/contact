@@ -6,17 +6,19 @@ security:
             pattern:    ^/
             anonymous: ~
             form_login:
-                login_path:  /login
-                check_path:  /login_check
-                provider: fos_userbundle
-                csrf_provider: form.csrf_provider
-            logout: 
-                path:   /logout
-                target: /
+                  provider:       fos_userbundle
+                  login_path:     fos_user_security_login
+                  use_forward:    false
+                  check_path:     fos_user_security_check
+                  failure_path:   null
+                  csrf_provider: form.csrf_provider
+            logout:
+                  path:   fos_user_security_logout
+                  target: /
     access_control:
         - { path: ^/register, roles: ROLE_SUPER_ADMIN }
-        - { path: ^/admin, roles: [ROLE_SUPER_ADMIN,ROLE_ADMIN] }
-        - { path: ^/category(3|4)$, roles: [ROLE_USER,ROLE_ADMIN] }
+        - { path: admin, roles: [ROLE_SUPER_ADMIN,ROLE_ADMIN] }
+        - { path: ^/*/category(3|4)$, roles: [ROLE_USER,ROLE_ADMIN] }
 
     providers:
         fos_userbundle:

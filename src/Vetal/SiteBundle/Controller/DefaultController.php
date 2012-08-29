@@ -106,14 +106,20 @@ class DefaultController extends Controller {
       throw $this->createNotFoundException('Нет профиля ' . $profile_id);
     }
     $profileAdmin = $profile->getProfiles(); // профиль свахи, за которой закреплен (если закреплен) запрашиваемый пользователь
+    
     $token = $this->get('security.context')->getToken();
-    $curr_user_profile_id = $token->getUser()->getProfile()->getId(); // ID профиля текущего пользователя
+    $roles = $token->getRoles();
+    $curr_user = $token->getUser();
+    if ((!$curr_user)|(count($roles) == 0)) { // если запрашиваемого профиля не существует 
+      throw new AccessDeniedException();
+    }
+    $curr_user_profile_id = $curr_user->getProfile()->getId(); // ID профиля текущего пользователя
     $isProfileAdmin = false; // признак того, что этот профиль закреплен за текущей свахой (текущим админом)
     if ($profileAdmin) {
       $isProfileAdmin = ($curr_user_profile_id == $profileAdmin->getId());
     }
     if (!(
-            ($token->getUser()->getProfile()->getId() == $profile_id)
+            ($curr_user->getProfile()->getId() == $profile_id)
             || (true === $this->get('security.context')->isGranted('ROLE_SUPER_ADMIN'))
             || ($isProfileAdmin)
             )) {
