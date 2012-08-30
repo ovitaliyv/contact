@@ -138,7 +138,7 @@ div[role='main']>.row{
 }
 h1.title{
   text-align: center;
-  font-family: 'MarckScript', 'Azbuka03_D', 'Meriad Pro';
+  /*font-family: 'MarckScript', 'Azbuka03_D', 'Meriad Pro';*/
   font-size: 72px;
   line-height: 90px;
   height: 120px;
@@ -190,14 +190,34 @@ ul#main_menu {list-style:none; margin:0; padding:0px;}
 ul#main_menu * {margin:0; padding:0;}
 ul#main_menu li {position:relative; padding:0 22px 0 22px; display:inline-block;}
 
-ul#main_menu li a{font-family: 'Ovo', serif; color:#ffffff; font-size:18px; font-style: italic; height:70px; line-height:70px; display:inline-block;}
+ul#main_menu li a{
+  /*font-family: 'Ovo', serif;*/ 
+  color:#ffffff; 
+  font-size:18px; 
+  /*font-style: italic;*/ 
+  height:70px; 
+  line-height:70px; 
+  display:inline-block;
+}
 ul#main_menu li a.selected {text-decoration: none;}
 ul#main_menu li a.selected ,
 ul#main_menu li a:hover{background:url("/img/menu_bullet.gif") no-repeat bottom center;}
 
-ul#main_menu ul {position:absolute; top:70px; left:0; background:#ededed; display:none; opacity:0; list-style:none;}
-ul#main_menu ul li {position:relative; width:140px; margin:0; padding:0px;height:40px; line-height:40px; text-align:left;}
-ul#main_menu ul li a {display:block; padding:0 20px 0 20px; font-size:14px;color:#434343;height:40px; line-height:40px;}
+ul#main_menu ul {
+  position:absolute; 
+  top:70px; 
+  left:0; 
+  background:#ededed; 
+  display:none; 
+  opacity:0; 
+  padding: 0px;
+  list-style:none;
+  -webkit-box-shadow: 1px 1px 10px #B4B4B4;
+  -moz-box-shadow: 1px 1px 10px #B4B4B4;
+  box-shadow: 1px 1px 10px #B4B4B4;
+}
+ul#main_menu ul li {position:relative; width:140px; padding:0px; margin: 2px 0px; height:30px; line-height:30px; text-align:left;}
+ul#main_menu ul li a {display:block; padding:0px 18px; font-size:14px;color:#434343;height:30px; line-height:30px;}
 ul#main_menu ul li a:hover {background-color:#e5e5e5; background-image:none;color:#434343;}
 
 /* Slider
@@ -205,7 +225,7 @@ ul#main_menu ul li a:hover {background-color:#e5e5e5; background-image:none;colo
 .slider_container{ width:920px; margin:auto; clear:both; background:url("/img/shadow_top.png") no-repeat top center; padding:30px 0 0 0;}
 .flex-caption{ position: absolute; right:11px; bottom:20px;}
 .caption_title_line{ width:450px; height:75px; padding:5px 15px 10px 15px;}
-.flex-caption h2{ font-size:20px; padding:5px 0 5px 0; margin:0px;font-family: 'Ovo', serif;}
+.flex-caption h2{ font-size:20px; padding:5px 0 5px 0; margin:0px;}
 
 .flex-container a:active,
 .flexslider a:active {outline: none;}
