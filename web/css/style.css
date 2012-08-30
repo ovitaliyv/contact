@@ -112,6 +112,7 @@ div[role='main']{
 }
 #bottom_content{
   background: white url("/img/header_texture.jpg") top center repeat-x;
+  min-height: 430px;
   margin: 0px 0px -20px;
   padding: 0 0 20px;
   position: relative;
@@ -139,11 +140,16 @@ div[role='main']>.row{
 h1.title{
   text-align: center;
   /*font-family: 'MarckScript', 'Azbuka03_D', 'Meriad Pro';*/
-  font-size: 72px;
-  line-height: 90px;
+  font-size: 60px;
+  line-height: 80px;
   height: 120px;
   margin: 0;
+  text-shadow: 0px -1px 2px #666;
 }
+h1.title sub{
+  color: #E8A900;
+}
+
 a.logout,
 a.login,
 span.user_name{
@@ -198,10 +204,12 @@ ul#main_menu li a{
   height:70px; 
   line-height:70px; 
   display:inline-block;
+  text-shadow: 0px 1px 2px #666;
+
 }
 ul#main_menu li a.selected {text-decoration: none;}
 ul#main_menu li a.selected ,
-ul#main_menu li a:hover{background:url("/img/menu_bullet.gif") no-repeat bottom center;}
+ul#main_menu li:hover{background:url("/img/menu_bullet.gif") no-repeat bottom center;}
 
 ul#main_menu ul {
   position:absolute; 
