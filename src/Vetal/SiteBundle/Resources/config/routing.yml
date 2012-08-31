@@ -10,6 +10,41 @@ VetalSiteBundle_homepageSlash:
     requirements:
       _locale: %locales%
 
+VetalSiteBundle_about_us:
+    pattern:  /{_locale}/about_us
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+
+VetalSiteBundle_services:
+    pattern:  /{_locale}/services
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+
+VetalSiteBundle_gallery:
+    pattern:  /{_locale}/gallery
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+VetalSiteBundle_search:
+    pattern:  /{_locale}/search
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+
+VetalSiteBundle_news:
+    pattern:  /{_locale}/news
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+
+VetalSiteBundle_contacts:
+    pattern:  /{_locale}/contacts
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+
 VetalSiteBundle_category:
     pattern:  /{_locale}/category{category_id}
     defaults: { _controller: VetalSiteBundle:Default:show, _locale: %locale% }

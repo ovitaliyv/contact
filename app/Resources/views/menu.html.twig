@@ -1,21 +1,23 @@
 <div class="row menu">
   <div class="menucontainer">
     <ul id="main_menu" class="main_menu">
-      <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-14">
-        <a class="selected" href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.home'|trans({}, 'VetalSiteBundle') }}</a>
+      <li>
+        <a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.home'|trans({}, 'VetalSiteBundle') }}</a>
       </li>
-      <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.about_us'|trans({}, 'VetalSiteBundle') }}</a></li>
-      <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="{{ path('VetalSiteBundle_homepage') }}" class="">{{ 'menu.main.gallery'|trans({}, 'VetalSiteBundle') }}</a>
-        <ul class="sub-menu" style="overflow: hidden; display: block; height: 0px; z-index: 60; opacity: 0.0125; ">
-          <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.gallery_i.ua'|trans({}, 'VetalSiteBundle') }}</a></li>
-          <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.gallery_i.ru'|trans({}, 'VetalSiteBundle') }}</a></li>
-          <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.gallery_i.world'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_gallery') }}" class="">{{ 'menu.main.gallery'|trans({}, 'VetalSiteBundle') }}</a>
+        <ul class="sub-menu">
+          <li><a href="{{ path('VetalSiteBundle_gallery') }}">{{ 'menu.main.gallery_i.ua'|trans({}, 'VetalSiteBundle') }}</a></li>
+          <li><a href="{{ path('VetalSiteBundle_gallery') }}">{{ 'menu.main.gallery_i.ru'|trans({}, 'VetalSiteBundle') }}</a></li>
+          <li><a href="{{ path('VetalSiteBundle_gallery') }}">{{ 'menu.main.gallery_i.world'|trans({}, 'VetalSiteBundle') }}</a></li>
         </ul>
       </li>
-      <li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15"><a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.services'|trans({}, 'VetalSiteBundle') }}</a></li>
-      <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57"><a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.search'|trans({}, 'VetalSiteBundle') }}</a></li>
-      <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.news'|trans({}, 'VetalSiteBundle') }}</a></li>
-      <li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.contacts'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_services') }}">{{ 'menu.main.services'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_search') }}">{{ 'menu.main.search'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_news') }}">{{ 'menu.main.news'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_contacts') }}">{{ 'menu.main.contacts'|trans({}, 'VetalSiteBundle') }}</a></li>
+      {% if is_granted('ROLE_ADMIN') %}
+      <li><a href="{{ path('sonata_admin_dashboard') }}">{{ 'title_dashboard'|trans({}, 'SonataAdminBundle') }}</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
