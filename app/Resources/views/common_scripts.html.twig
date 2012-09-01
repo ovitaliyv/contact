@@ -12,10 +12,10 @@
   $('a[href]').each(function(){
     var isHomepage = ($(this).attr('href')=="{{ path('VetalSiteBundle_homepageSlash') }}")?true:false;
     if ((isHomepage)&&($(this).attr('href')==location.pathname)){
-      $(this).addClass('selected');
+      $(this).addClass('active');
     }else{
       var cont = location.pathname.search($(this).attr('href'));
-      if((cont>-1)&&(!isHomepage)){$(this).addClass('selected')}
+      if((cont>-1)&&(!isHomepage)){$(this).addClass('active')}
     }
   });
 </script>
