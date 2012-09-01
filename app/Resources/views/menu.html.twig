@@ -2,13 +2,13 @@
   <div class="menucontainer">
     <ul id="main_menu" class="main_menu">
       <li>
-        <a href="{{ path('VetalSiteBundle_homepage') }}">{{ 'menu.main.home'|trans({}, 'VetalSiteBundle') }}</a>
+        <a href="{{ path('VetalSiteBundle_homepageSlash') }}">{{ 'menu.main.home'|trans({}, 'VetalSiteBundle') }}</a>
       </li>
       <li><a href="{{ path('VetalSiteBundle_gallery') }}" class="">{{ 'menu.main.gallery'|trans({}, 'VetalSiteBundle') }}</a>
         <ul class="sub-menu">
-          <li><a href="{{ path('VetalSiteBundle_gallery') }}">{{ 'menu.main.gallery_i.ua'|trans({}, 'VetalSiteBundle') }}</a></li>
-          <li><a href="{{ path('VetalSiteBundle_gallery') }}">{{ 'menu.main.gallery_i.ru'|trans({}, 'VetalSiteBundle') }}</a></li>
-          <li><a href="{{ path('VetalSiteBundle_gallery') }}">{{ 'menu.main.gallery_i.world'|trans({}, 'VetalSiteBundle') }}</a></li>
+          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'ua'}) }}">{{ 'menu.main.gallery_i.ua'|trans({}, 'VetalSiteBundle') }}</a></li>
+          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'ru'}) }}">{{ 'menu.main.gallery_i.ru'|trans({}, 'VetalSiteBundle') }}</a></li>
+          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'world'}) }}">{{ 'menu.main.gallery_i.world'|trans({}, 'VetalSiteBundle') }}</a></li>
         </ul>
       </li>
       <li><a href="{{ path('VetalSiteBundle_services') }}">{{ 'menu.main.services'|trans({}, 'VetalSiteBundle') }}</a></li>
@@ -16,7 +16,7 @@
       <li><a href="{{ path('VetalSiteBundle_news') }}">{{ 'menu.main.news'|trans({}, 'VetalSiteBundle') }}</a></li>
       <li><a href="{{ path('VetalSiteBundle_contacts') }}">{{ 'menu.main.contacts'|trans({}, 'VetalSiteBundle') }}</a></li>
       {% if is_granted('ROLE_ADMIN') %}
-      <li><a href="{{ path('sonata_admin_dashboard') }}">{{ 'title_dashboard'|trans({}, 'SonataAdminBundle') }}</a></li>
+      <li><a target="_blank" href="{{ path('sonata_admin_dashboard') }}">{{ 'title_dashboard'|trans({}, 'SonataAdminBundle') }}</a></li>
       {% endif %}
     </ul>
   </div>

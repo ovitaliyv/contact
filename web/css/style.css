@@ -9,8 +9,8 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background: #676767; color: #fff; text-shadow: none; }
+::selection { background: #676767; color: #fff; text-shadow: none; }
 
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
@@ -63,10 +63,6 @@ td { vertical-align: top; }
 
 
 /* Custom */
-html,body{ 
-  background:url("/img/bg-texture1.jpg") repeat #e6e6e6;
-  height: 100%;
-}
 header>[class*="span"]{
   padding: 5px 20px 0;
   background: transparent url("/img/transp_bg1.png") top center no-repeat;
@@ -111,7 +107,7 @@ div[role='main']{
   background: white url("/img/header_texture.jpg") top center repeat-x;
   min-height: 430px;
   margin: 0px 0px -20px;
-  padding: 0 0 20px;
+  padding: 0 40px 20px;
   position: relative;
   z-index: 11;
   border-radius: 10px;
@@ -135,7 +131,7 @@ div[role='main']>.row{
   /*  visibility: hidden;*/
 }
 h1.title{
-  color: #AAA;
+  color: #868686;
   text-align: center;
   /*font-family: 'MarckScript', 'Azbuka03_D', 'Meriad Pro';*/
   font-size: 60px;
@@ -152,7 +148,6 @@ a.logout,
 a.login,
 span.user_name{
   float: right;
-  color:white;
 }
 a.logout:hover,
 a.login:hover{ 
@@ -167,10 +162,24 @@ input#remember_me{
 label[for='remember_me']{
   display: inline;
 }
+.home_title{
+  background: url("/img/divider.jpg") no-repeat center bottom;
+  padding: 0 0 80px 0;
+}
+.home_title h2{ float:left;font-size:24px; padding:0px 0; margin:0px; letter-spacing:-0.7px;}
+.home_title:after{
+  content: " ";
+  display: block;
+  clear: both;
+}
+.socials{ float:right; text-align:center; display:block; padding:5px 0 0 0;}
+.socials ul{ display:inline; padding:0px; margin:0px;}
+.socials ul li{ display:inline; padding:0 0 0 5px; float:none;}
+.socials ul li a{ border: none; outline: none; color:transparent;}
 
 .title a{ color: #4C402B; }
 .description{ color: #E8A900; }
-a { color: #E8A900; }
+
 h5.subtitle, h3.form_subtitle, .visual-form-builder .legend h3{ color: #E8A900; }
 .home_title h2 span, .about_right h2, .sidebar .tweet ul li a, .select_container, span.date_value, .gallery13 h3, ul.filter_portfolio li a{ color: #E8A900; }
 .comm_line_blog, .blog_next a, .blog_prev a, .sidebar ul li, .bgs ul li{ border-bottom: 1px #E8A900 dotted;; }
@@ -195,7 +204,7 @@ ul#main_menu li {position:relative; padding:0 22px 0 22px; display:inline-block;
 
 ul#main_menu li a{
   font-size:16px; 
-  color: #E8A900;
+  /*color: #E8A900;*/
   height:70px; 
   line-height:70px; 
   display:inline-block;
@@ -221,55 +230,21 @@ ul#main_menu ul {
 }
 ul#main_menu ul li {position:relative; width:140px; padding:0px; margin: 2px 0px; height:30px; line-height:30px; text-align:left;}
 ul#main_menu ul li a {display:block; padding:0px 18px; font-size:14px;color:#434343;height:30px; line-height:30px;}
-ul#main_menu ul li a:hover {background-color:#e5e5e5; background-image:none;color:#434343;}
+ul#main_menu ul li a.selected,
+ul#main_menu ul li a:hover {
+  background-color:#e5e5e5; 
+  background-image:none;
+  color:#434343;
+}
+ul#main_menu ul li a.selected{
+  background-color: #E8A900;
+  color: white;
+}
 
-/* Slider
-/*-----------------------------------------------------------------------------------*/
-.slider_container{ width:920px; margin:auto; clear:both; background:url("/img/shadow_top.png") no-repeat top center; padding:30px 0 0 0;}
-.flex-caption{ position: absolute; right:11px; bottom:20px;}
-.caption_title_line{ width:450px; height:75px; padding:5px 15px 10px 15px;}
-.flex-caption h2{ font-size:20px; padding:5px 0 5px 0; margin:0px;}
-
-.flex-container a:active,
-.flexslider a:active {outline: none;}
-.slides,
-.flex-control-nav,
-.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
-
-/* FlexSlider Necessary Styles
-*********************************/ 
-.flexslider {width: 100%; margin: 0; padding: 0 0 30px 0;background:url("/img/shadow_bottom.png")/*tpa=http://famousthemes.com/marriage-wordpress/wp-content/themes/marriage//img/shadow_bottom.png*/ no-repeat center bottom;}
-.flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {max-width: 100%; display: block; border:10px #ededed solid;}
-.flex-pauseplay span {text-transform: capitalize;}
-.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
-html[xmlns] .slides {display: block;} 
-* html .slides {height: 1%;}
-.no-js .slides > li:first-child {display: block;}
-.flexslider {position: relative; zoom: 1;}
-.flexslider .slides {zoom: 1;}
-.flexslider .slides > li {position: relative;}
-.flex-container {zoom: 1; position: relative;}
-
-/* Direction Nav */
-.flex-direction-nav li a {width:45px; height:42px; margin:0; display: block; position: absolute; left:11px; cursor: pointer; text-indent: -9999px;}
-.flex-direction-nav li a.next { bottom:98px;}
-.flex-direction-nav li a.prev {bottom:50px;}
-.flex-direction-nav li a.next:hover {background:url("/img/next_a.png") no-repeat center;}
-.flex-direction-nav li a.prev:hover {background:url("/img/prev_a.png") no-repeat center;}
-.flex-direction-nav li a.disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
-
-/* Control Nav */
-.flex-control-nav {width: 100%; position: absolute; bottom: -30px; text-align: center;}
-.flex-control-nav li {margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline;}
-.flex-control-nav li:first-child {margin: 0;}
-.flex-control-nav li a {width: 13px; height: 13px; display: block; cursor: pointer; text-indent: -9999px;}
-.flex-control-nav li a:hover {background-position: 0 -13px;}
-.flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}
 /*******************************************/
 /* Twitter-bootstrap compiled */
 .span12 {
-  width: 976px;
+  width: 960px;
 }
 .span11 {
   width: 893px;
@@ -278,7 +253,8 @@ html[xmlns] .slides {display: block;}
   width: 810px;
 }
 .span9 {
-  width: 727px;
+  width: 670px;
+  padding-left: 20px;
 }
 .span8 {
   width: 644px;

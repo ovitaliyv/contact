@@ -9,6 +9,10 @@
   {% include('::flex-slider.html.twig') %}
 {% endblock %}
 
+{% block home_title %}
+  {% include('::home_title.html.twig') %}
+{% endblock %}
+
 {% block javascripts %}
 <script type='text/javascript' src="{{ asset('js/jquery.flexslider-min.js') }}"></script>
 <script>

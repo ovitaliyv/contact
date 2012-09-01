@@ -27,6 +27,13 @@ VetalSiteBundle_gallery:
     defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
     requirements:
       _locale: %locales%
+
+VetalSiteBundle_gallery_region:
+    pattern:  /{_locale}/gallery/{region}
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+
 VetalSiteBundle_search:
     pattern:  /{_locale}/search
     defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }

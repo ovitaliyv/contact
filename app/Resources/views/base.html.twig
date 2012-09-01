@@ -11,12 +11,8 @@
 
     <meta name="viewport" content="width=device-width">
 
-    <!-- Google web font -->
-    <link href="{{ asset('css/css-family=Ovo.css') }}" rel='stylesheet' type='text/css' />
-    <link href="{{ asset('css/css-family=Great+Vibes.css') }}" rel='stylesheet' type='text/css' />
-    <link href="{{ asset('css/css-family=Azbuka03_D.css') }}" rel='stylesheet' type='text/css' />
-    <link href="{{ asset('css/font-MarckScript.css') }}" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" >
+    <link rel="stylesheet" href="{{ asset('css/new_style.css') }}" type="text/css" >
     <link rel="stylesheet" href="{{ asset('css/yellow.css') }}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{{ asset('twitter-bootstrap/less/bootstrap.css') }}" />
     <!--link rel="stylesheet/less" href="/twitter-bootstrap/less/bootstrap.less"-->
@@ -36,6 +32,7 @@
             <div id="bottom_content">
               <h1 class="title"><sub>e</sub>Contact</h1>
               {% block slider %}{% endblock %}
+              {% block home_title %}{% endblock %}
               {% include('::sidebar.html.twig') %}
               <div class="span9">
               {% block main %}{% endblock %}

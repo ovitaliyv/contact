@@ -6,13 +6,19 @@
 // Body reset
 // -------------------------
 
+html{
+  background: url("/img/bg-texture1.jpg") repeat @bodyBackground;
+}
+html,
+body{ 
+  height: 100%;
+}
 body {
   margin: 0;
   font-family: @baseFontFamily;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
   color: @textColor;
-  background-color: @bodyBackground;
 }
 
 

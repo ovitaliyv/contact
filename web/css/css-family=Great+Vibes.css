@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Great Vibes';
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/greatvibes/greatvibes.eot");
-  src: local('Great Vibes'), local('GreatVibes-Regular'), url("/fonts/greatvibes/greatvibes.eot") format('embedded-opentype'), url("/fonts/greatvibes/greatvibes.woff") format('woff');
-}

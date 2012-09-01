@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Ovo';
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/ovo/ovo.eot");
-  src: local('Ovo'), url("/fonts/ovo/ovo.eot") format('embedded-opentype'), url("/fonts/ovo/ovo.woff") format('woff');
-}
