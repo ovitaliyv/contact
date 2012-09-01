@@ -1,12 +1,20 @@
-VetalSiteBundle_homepage:
-    pattern:  /{_locale}
+VetalSiteBundle_homepageSlash:
+    pattern:  /{_locale}/
     defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
     requirements:
       _locale: %locales%
 
-VetalSiteBundle_homepageSlash:
-    pattern:  /{_locale}/
-    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+VetalSiteBundle_HP:
+    pattern:  /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: VetalSiteBundle_homepageSlash
+        permanent: true # this is for 301
+        _locale: %locale%
+
+VetalSiteBundle_homepage:
+    pattern:  /{_locale}
+    defaults: { _redirect: {route: VetalSiteBundle_homepageSlash, status: 301}, _locale: %locale%  }
     requirements:
       _locale: %locales%
 
