@@ -28,6 +28,7 @@ class AppKernel extends Kernel {
         new Sonata\AdminBundle\SonataAdminBundle(),
         new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+        new Lunetics\LocaleBundle\LuneticsLocaleBundle(),
     );
 
     if (in_array($this->getEnvironment(), array('dev', 'test'))) {

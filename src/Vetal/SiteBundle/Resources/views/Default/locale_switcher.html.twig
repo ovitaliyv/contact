@@ -1,0 +1,6 @@
+<ul>
+    {% for locale in locales %}
+    
+        <li><a class="{{ locale.locale }}" href="{{ locale.link }}" title="{{ locale.locale_current_language }}">{{ locale.locale_current_language }}</a></li>
+    {% endfor %}
+</ul>

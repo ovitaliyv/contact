@@ -73,3 +73,17 @@ sonata_block:
         sonata.block.service.rss:
 sonata_admin:
     title:  eContact.in.Ukarine
+
+lunetics_locale:
+  allowed_locales:
+    - ru
+    - uk
+    - en
+  guessing_order:
+    - cookie
+    - router
+    - browser
+  cookie:
+    set_on_detection: true
+  switcher:
+    template: VetalSiteBundle:Default:locale_switcher.html.twig

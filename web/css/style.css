@@ -96,6 +96,30 @@ header>div[class*="span"]{
   margin: 0 auto;
   float: none;
 }
+
+header .locale_switcher li {
+  display: inline-block;
+  list-style: none;
+}
+header .locale_switcher li a{
+  text-indent: -999px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+header .locale_switcher li a.ru{
+  background: transparent url("/img/flags/ru.png") no-repeat center top;
+}
+header .locale_switcher li a.uk{
+  background: transparent url("/img/flags/uk.png") no-repeat left top;
+}
+header .locale_switcher li a.en{
+  background: transparent url("/img/flags/en.png") no-repeat left top;
+}
+
 div[role='main']{
   margin: 0 auto;
 }
