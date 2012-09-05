@@ -6,9 +6,9 @@
       </div>
       <div>
       {% if app.user %}
-        <a class="logout" href="{{ path('logout') }}"> (выход)</a> <span class="user_name">  <a class="logout" href="{{ path('currUser') }}">{{ app.user.username }} </a></span> 
+        <a class="logout" href="{{ path('logout', {'_locale':app.request.locale}) }}"> (выход)</a> <span class="user_name">  <a class="logout" href="{{ path('currUser', {'_locale':app.request.locale}) }}">{{ app.user.username }} </a></span> 
       {% else %}
-        <a class="login" href="{{ path('login') }}"> Вход</a>
+        <a class="login" href="{{ path('login', {'_locale':app.request.locale}) }}"> Вход</a>
       {% endif %}
       </div>
     </div>

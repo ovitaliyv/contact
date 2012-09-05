@@ -80,8 +80,8 @@ lunetics_locale:
     - uk
     - en
   guessing_order:
-    - cookie
     - router
+    - cookie
     - browser
   cookie:
     set_on_detection: true

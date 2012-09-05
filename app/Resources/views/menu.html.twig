@@ -2,21 +2,21 @@
   <div class="menucontainer">
     <ul id="main_menu" class="main_menu">
       <li>
-        <a href="{{ path('VetalSiteBundle_homepageSlash') }}">{{ 'menu.main.home'|trans({}, 'VetalSiteBundle') }}</a>
+        <a href="{{ path('VetalSiteBundle_homepageSlash', {'_locale':app.request.locale}) }}">{{ 'menu.main.home'|trans({}, 'VetalSiteBundle') }}</a>
       </li>
-      <li><a href="{{ path('VetalSiteBundle_gallery') }}" class="">{{ 'menu.main.gallery'|trans({}, 'VetalSiteBundle') }}</a>
+      <li><a href="{{ path('VetalSiteBundle_gallery', {'_locale':app.request.locale}) }}" class="">{{ 'menu.main.gallery'|trans({}, 'VetalSiteBundle') }}</a>
         <ul class="sub-menu">
-          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'ua'}) }}">{{ 'menu.main.gallery_i.ua'|trans({}, 'VetalSiteBundle') }}</a></li>
-          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'ru'}) }}">{{ 'menu.main.gallery_i.ru'|trans({}, 'VetalSiteBundle') }}</a></li>
-          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'world'}) }}">{{ 'menu.main.gallery_i.world'|trans({}, 'VetalSiteBundle') }}</a></li>
+          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'ua', '_locale':app.request.locale}) }}">{{ 'menu.main.gallery_i.ua'|trans({}, 'VetalSiteBundle') }}</a></li>
+          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'ru', '_locale':app.request.locale}) }}">{{ 'menu.main.gallery_i.ru'|trans({}, 'VetalSiteBundle') }}</a></li>
+          <li><a href="{{ path('VetalSiteBundle_gallery_region',{'region':'world', '_locale':app.request.locale}) }}">{{ 'menu.main.gallery_i.world'|trans({}, 'VetalSiteBundle') }}</a></li>
         </ul>
       </li>
-      <li><a href="{{ path('VetalSiteBundle_services') }}">{{ 'menu.main.services'|trans({}, 'VetalSiteBundle') }}</a></li>
-      <li><a href="{{ path('VetalSiteBundle_search') }}">{{ 'menu.main.search'|trans({}, 'VetalSiteBundle') }}</a></li>
-      <li><a href="{{ path('VetalSiteBundle_news') }}">{{ 'menu.main.news'|trans({}, 'VetalSiteBundle') }}</a></li>
-      <li><a href="{{ path('VetalSiteBundle_contacts') }}">{{ 'menu.main.contacts'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_services', {'_locale':app.request.locale}) }}">{{ 'menu.main.services'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_search', {'_locale':app.request.locale}) }}">{{ 'menu.main.search'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_news', {'_locale':app.request.locale}) }}">{{ 'menu.main.news'|trans({}, 'VetalSiteBundle') }}</a></li>
+      <li><a href="{{ path('VetalSiteBundle_contacts', {'_locale':app.request.locale}) }}">{{ 'menu.main.contacts'|trans({}, 'VetalSiteBundle') }}</a></li>
       {% if is_granted('ROLE_ADMIN') %}
-      <li><a target="_blank" href="{{ path('sonata_admin_dashboard') }}">{{ 'title_dashboard'|trans({}, 'SonataAdminBundle') }}</a></li>
+      <li><a target="_blank" href="{{ path('sonata_admin_dashboard', {'_locale':app.request.locale}) }}">{{ 'title_dashboard'|trans({}, 'SonataAdminBundle') }}</a></li>
       {% endif %}
     </ul>
   </div>

@@ -19,6 +19,16 @@ class DefaultController extends Controller {
     return new Response('Тестовая <strong>срока</strong>');
   }
 
+  public function locale_homepageAction() {
+
+    $request = $this->getRequest();
+    $locale = $request->cookies->get('lunetics_locale');
+    if(!$locale){
+      $locale = $request->getPreferredLanguage(array('uk', 'ru', 'en'));
+    }
+    return $this->redirect($this->generateUrl('VetalSiteBundle_homepageSlash', array('_locale'=>$locale)));
+ }
+
   public function indexAction() {
 
     return $this->render('VetalSiteBundle:Default:index.html.twig');
