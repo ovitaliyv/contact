@@ -1,7 +1,5 @@
-{% extends 'TwigBundle:Exception:error.html.twig' %}
+{% extends '::base.html.twig' %}
 
-{% block main %} 
-<div class="well">
-    <h2>Доступ запрещен!</h2>
-</div>
-{% endblock %}
+{% set locale_switcher_flag = 'Off' %}
+{% block main %}Доступ запрещен{% endblock %}
+

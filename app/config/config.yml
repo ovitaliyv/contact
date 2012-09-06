@@ -22,6 +22,8 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+    globals:
+        locale_switcher_flag: 'On'
 
 # Assetic Configuration
 assetic:

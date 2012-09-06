@@ -4,7 +4,7 @@ menu:
         home: Homepage
         services: Services
         gallery: Gallery
-        gallery_i:
+        gallery_a:
           ua: Ukraine
           ru: Russia
           world: Foreign
@@ -16,3 +16,8 @@ menu:
         name: Group name
         name: Group name
         name: Group name
+
+user:
+  login: Login
+  exit: exit
+  
