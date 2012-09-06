@@ -3,7 +3,7 @@ menu:
     main:
         home: Homepage
         services: Services
-        gallery: Gallery
+        gallery: Stars Gallery
         gallery_a:
           ua: Ukraine
           ru: Russia
@@ -20,4 +20,8 @@ menu:
 user:
   login: Login
   exit: exit
-  
+
+errors:
+  access_denied: Access Denied
+  not_found: Not Found
+

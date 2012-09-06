@@ -1,5 +1,5 @@
 {
-    "hash": "64201ed7a32d6b989ce8d67f478029b2",
+    "hash": "e020801062a964d6ef83f551666b29d2",
     "packages": [
         {
             "package": "doctrine/common",
@@ -103,8 +103,9 @@
         },
         {
             "package": "lunetics/locale-bundle",
-            "version": "2.0.x-dev",
-            "source-reference": "b8fa6acc029c58c780a2caa46e19d08759cb99b7"
+            "version": "2.1.x-dev",
+            "source-reference": "fb1fd770d5abd237c47fe8a559d9708cde255aca",
+            "commit-date": "1345141460"
         },
         {
             "package": "monolog/monolog",
@@ -127,7 +128,7 @@
         {
             "package": "sensio/distribution-bundle",
             "version": "dev-master",
-            "source-reference": "749aa6bbb2fac33091804d56a35339dc4c65f4a6",
+            "source-reference": "v2.1.0",
             "commit-date": "1346859132"
         },
         {
@@ -139,7 +140,7 @@
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "1281f6218226ddb88df8546f28a3166e2a0cb55d",
+            "source-reference": "v2.1.0",
             "commit-date": "1346234539"
         },
         {
@@ -246,15 +247,9 @@
         },
         {
             "package": "symfony/symfony",
-            "version": "dev-master",
-            "alias-pretty-version": "2.1.x-dev",
-            "alias-version": "2.1.9999999.9999999-dev"
-        },
-        {
-            "package": "symfony/symfony",
-            "version": "dev-master",
-            "source-reference": "00ec9b53911c0ff288439ac911d0f0edde176b6c",
-            "commit-date": "1346859854"
+            "version": "2.1.x-dev",
+            "source-reference": "e7059b44c78ca8e1e892adb4d93b5a482f4eb9b3",
+            "commit-date": "1346926323"
         },
         {
             "package": "twig/extensions",
@@ -287,8 +282,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "doctrine/doctrine-bundle": 20,
-        "twig/extensions": 20,
         "doctrine/doctrine-fixtures-bundle": 20
     }
 }

@@ -20,3 +20,8 @@ menu:
 user:
   login: Вход
   exit: выход
+
+errors:
+  access_denied: Доступ запрещен
+  not_found: Ресурс не найден (возможно неверный адрес)
+

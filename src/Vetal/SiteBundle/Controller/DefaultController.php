@@ -34,6 +34,13 @@ class DefaultController extends Controller {
     return $this->render('VetalSiteBundle:Default:index.html.twig');
   }
 
+  
+  public function gallery_regionAction($region) {
+
+    return $this->render('VetalSiteBundle:Default:index.html.twig', array('region' => $region));
+  }
+
+  
   /**
    * Отображение информации о текущей категории
    * 

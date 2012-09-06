@@ -6,9 +6,22 @@ VetalSiteBundleFOSUserBundle:
     resource: "@VetalSiteBundle/Resources/config/routing_fos_user.yml"
     prefix:   /{_locale}
 
+VetalSiteBundle_homepageSlash:
+    pattern:  /{_locale}/
+    defaults: { _controller: VetalSiteBundle:Default:index, _locale: %locale% }
+    requirements:
+      _locale: %locales%
+
+VetalSiteBundle_homepage:
+    pattern:  /{_locale}
+    defaults: { _redirect: {route: VetalSiteBundle_homepageSlash, status: 301}, _locale: %locale%  }
+    requirements:
+      _locale: %locales%
+
+
 VetalSiteBundle:
     resource: "@VetalSiteBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /{_locale}
 
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
