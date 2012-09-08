@@ -106,21 +106,28 @@ header .locale_switcher li {
 }
 header .locale_switcher li a{
   text-indent: -999px;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 12px;
   padding: 0;
   margin: 0;
   overflow: hidden;
   display: inline-block;
+  background-position: center center;
+}
+header .locale_switcher li a:hover,
+header .locale_switcher li a.active{
+  -webkit-box-shadow: 0px 0px 10px #B4B4B4;
+  -moz-box-shadow: 0px 0px 10px #B4B4B4;
+  box-shadow: 0px 0px 10px #B4B4B4;
 }
 header .locale_switcher li a.ru{
-  background: transparent url("/img/flags/ru.png") no-repeat center top;
+  background: transparent url("/img/flags/ru.png") no-repeat;
 }
 header .locale_switcher li a.uk{
-  background: transparent url("/img/flags/uk.png") no-repeat left top;
+  background: transparent url("/img/flags/uk.png") no-repeat;
 }
 header .locale_switcher li a.en{
-  background: transparent url("/img/flags/en.png") no-repeat left top;
+  background: transparent url("/img/flags/en.png") no-repeat;
 }
 
 div[role='main']{
