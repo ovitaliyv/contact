@@ -12,6 +12,4 @@ parameters:
     mailer_password:   ~
 
     locale:            ru
-    locales:           ru|en|uk
     secret:            ThisTokenIsNotSoSecretChangeItNessesery
-    region:            _

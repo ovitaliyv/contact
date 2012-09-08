@@ -5,7 +5,7 @@
       <ul class="span3 locale_switcher">
          {#{ locale_switcher() }#}
           {% for locale in param('lunetics_locale.allowed_locales') %}
-        <li><a class="{{ locale }}" href="{{ path(app.request.attributes.get("_route"), (app.request.attributes.get("_route_params")|merge({"_locale":  locale })))}}">{{ locale }}</a></li>
+        <li><a style="background-image: url('/img/flags/{{ locale }}.png');" href="{{ path(app.request.attributes.get("_route"), (app.request.attributes.get("_route_params")|merge({"_locale":  locale })))}}">{{ locale }}</a></li>
           {% endfor %}
       </ul>
       {% endif %}

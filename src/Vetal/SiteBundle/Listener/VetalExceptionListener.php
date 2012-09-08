@@ -19,7 +19,7 @@ class VetalExceptionListener {
     $request = $this->container->get('request');
     $this->locale = $request->cookies->get('lunetics_locale');
     if (!$this->locale) {
-      $locales = explode('|', $this->container->getParameter('locales'));
+      $locales = $this->container->getParameter('lunetics_locale.allowed_locales');
       $this->locale = $request->getPreferredLanguage($locales);
     }
     $request->setLocale($this->locale);
