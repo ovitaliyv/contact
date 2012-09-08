@@ -41,8 +41,8 @@ VetalSiteBundle_contacts:
       _locale: %locales%
 
 VetalSiteBundle_category:
-    pattern:  /category{category_id}
-    defaults: { _controller: VetalSiteBundle:Default:show, _locale: %locale%, category_id: '' }
+    pattern:  /category/{category_id}
+    defaults: { _controller: VetalSiteBundle:Default:show, _locale: %locale% }
     requirements:
       _locale: %locales%
 

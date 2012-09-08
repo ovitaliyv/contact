@@ -4,7 +4,7 @@ parameters:
 services:
   twig.extension.vetal_extension:
     class: %vetal_site.categories.class%
-    arguments: [ @doctrine.orm.entity_manager ]
+    arguments: [ @doctrine.orm.entity_manager, @service_container ]
     tags:
       - { name: twig.extension }
 

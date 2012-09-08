@@ -5,7 +5,6 @@
         "psr-0": { "": "src/" }
     },
     "require": {
-		"lunetics/locale-bundle": "2.1.*",
         "php": ">=5.3.3",
         "symfony/symfony": "2.1.*",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
@@ -19,6 +18,7 @@
         "sensio/generator-bundle": "2.1.*",
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
+		"lunetics/locale-bundle": "2.1.*",
 		"friendsofsymfony/user-bundle": "master",
 		"doctrine/doctrine-fixtures-bundle": "dev-master",
 		"sonata-project/admin-bundle": "*",

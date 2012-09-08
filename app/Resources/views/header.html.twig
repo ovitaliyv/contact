@@ -1,12 +1,14 @@
 <header class="row">
   <div class="span12">
     <div class="row">
-      <div class="span3 locale_switcher">
       {% if not (app_mode == 'error') %}
-         {{ locale_switcher() }}
+      <ul class="span3 locale_switcher">
+         {#{ locale_switcher() }#}
+          {% for locale in param('lunetics_locale.allowed_locales') %}
+        <li><a class="{{ locale }}" href="{{ path(app.request.attributes.get("_route"), (app.request.attributes.get("_route_params")|merge({"_locale":  locale })))}}">{{ locale }}</a></li>
+          {% endfor %}
+      </ul>
       {% endif %}
-
-      </div>
       <div>
       {% if app.user %}
         <a class="logout" href="{{ path('logout', {'_locale':app.request.locale}) }}"> ({{ 'user.exit'|trans({}, 'VetalSiteBundle') }})</a> <span class="user_name">  <a class="logout" href="{{ path('currUser', {'_locale':app.request.locale}) }}">{{ app.user.username }} </a></span> 
