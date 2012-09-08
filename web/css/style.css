@@ -97,7 +97,7 @@ header>div[class*="span"]{
   float: none;
 }
 
-header .locale_switcher ul {
+header .locale_switcher {
   margin: 0 10px;
 }
 header .locale_switcher li {
