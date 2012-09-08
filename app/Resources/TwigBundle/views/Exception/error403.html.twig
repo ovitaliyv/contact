@@ -1,5 +1,5 @@
 {% extends '::base.html.twig' %}
 
-{% set locale_switcher_flag = 'Off' %}
-{% block main %}{{ 'errors.access_denied'|trans({}, 'VetalSiteBundle') }}{% endblock %}
+{% set app_mode = 'error' %}
+{% block main %}<h3>{{ 'errors.access_denied'|trans({}, 'VetalSiteBundle') }}</h3>{% endblock %}
 

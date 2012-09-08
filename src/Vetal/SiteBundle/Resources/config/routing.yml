@@ -42,7 +42,7 @@ VetalSiteBundle_contacts:
 
 VetalSiteBundle_category:
     pattern:  /category{category_id}
-    defaults: { _controller: VetalSiteBundle:Default:show, _locale: %locale% }
+    defaults: { _controller: VetalSiteBundle:Default:show, _locale: %locale%, category_id: '' }
     requirements:
       _locale: %locales%
 

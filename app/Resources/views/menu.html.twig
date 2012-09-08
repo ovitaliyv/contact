@@ -15,8 +15,10 @@
       <li><a href="{{ path('VetalSiteBundle_search', {'_locale':app.request.locale}) }}">{{ 'menu.main.search'|trans({}, 'VetalSiteBundle') }}</a></li>
       <li><a href="{{ path('VetalSiteBundle_news', {'_locale':app.request.locale}) }}">{{ 'menu.main.news'|trans({}, 'VetalSiteBundle') }}</a></li>
       <li><a href="{{ path('VetalSiteBundle_contacts', {'_locale':app.request.locale}) }}">{{ 'menu.main.contacts'|trans({}, 'VetalSiteBundle') }}</a></li>
-      {% if is_granted('ROLE_ADMIN') %}
-      <li><a target="_blank" href="{{ path('sonata_admin_dashboard', {'_locale':app.request.locale}) }}">{{ 'title_dashboard'|trans({}, 'SonataAdminBundle') }}</a></li>
+      {% if not (app_mode == 'error') %}
+        {% if is_granted('ROLE_ADMIN') %}
+          <li><a target="_blank" href="{{ path('sonata_admin_dashboard', {'_locale':app.request.locale}) }}">{{ 'title_dashboard'|trans({}, 'SonataAdminBundle') }}</a></li>
+        {% endif %}
       {% endif %}
     </ul>
   </div>

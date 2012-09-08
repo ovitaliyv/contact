@@ -24,7 +24,8 @@ class DefaultController extends Controller {
     $request = $this->getRequest();
     $locale = $request->cookies->get('lunetics_locale');
     if(!$locale){
-      $locale = $request->getPreferredLanguage(array('uk', 'ru', 'en'));
+      $locales = explode('|', $this->container->getParameter('locales'));
+      $locale = $request->getPreferredLanguage($locales);
     }
     return $this->redirect($this->generateUrl('VetalSiteBundle_homepageSlash', array('_locale'=>$locale)));
  }

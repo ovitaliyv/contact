@@ -1,11 +1,6 @@
 {% extends '::base.html.twig' %}
 
-{% block title %} Ошибка {{ status_text }} {% endblock %}
-
-{% set locale_switcher_flag = 'Off' %}
-
-{% block main %} 
-<div class="well">
-    <h2>{{ status_code }} ( {{ status_text }} )</h2>
-</div>
+{% set app_mode = 'error' %}
+{% block main %}
+  <h2>Сервер вернул "{{ status_code }} {{ status_text }}".</h2>
 {% endblock %}

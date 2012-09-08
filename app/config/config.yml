@@ -23,7 +23,8 @@ twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
     globals:
-        locale_switcher_flag: 'On'
+        app_mode: ''
+        default_locale: %locale%
 
 # Assetic Configuration
 assetic:

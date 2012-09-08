@@ -13,5 +13,5 @@ parameters:
 
     locale:            ru
     locales:           ru|en|uk
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            ThisTokenIsNotSoSecretChangeItNessesery
     region:            _
